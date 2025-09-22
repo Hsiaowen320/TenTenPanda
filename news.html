@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,26 +19,25 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
     <!-- ICON -->
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-
-    <title>甜甜熊貓｜TenTen Donut - 甜點專賣</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />    
+    <title>甜甜熊貓｜TenTen Donut - 最新消息</title>
     <script type="module" crossorigin src="/TenTenPanda/assets/main-DPNeoqqk.js"></script>
     <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-j3EjH_4Y.css">
   </head>
-  <body>
-    <div id="userHeader">
-      <!-- 已登入 -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+  <body">
+    <!-- 這裡先用 true (登入成功) /  false (未登入) 切換版型 -->
+    
+    <!-- 登入成功時顯示 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
   <div
     class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
   >
@@ -442,344 +441,263 @@
         </div>
       </div>
   </div>  
-</nav>    </div>
-    <div id="guestHeader">
-      <!-- 未登入時顯示 -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
-  <div
-    class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
-  >
-    <!-- LOGO -->
-    <div class="order-0 mx-lg-auto">
-      <a class="navbar-brand" href="index.html">
-        <img class="logo" src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" />
-      </a>
-    </div>
-    <!-- 購物車 + 漢堡選單 (行動裝置) -->
-    <div class="d-flex order-1 align-items-center order-lg-0">
-      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 d-lg-none me-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          class="bi bi-cart2 text-primary-40"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-          />
-        </svg>
-      </a>
-      <button
-        class="navbar-toggler headerBtn bg-primary-20 p-0 border-0"
-        type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#modal-menu"
-        aria-controls="menu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="material-symbols-outlined text-primary-40 p-4">
-          menu
-        </span>
-      </button>
+</nav> 
 
-      <!-- 導航選單 -->
-      <div class="collapse navbar-collapse position-absolute start-0" id="menu">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
-          <li class="nav-item p-4 me-8 fs-6">
-            <a class="nav-link text-neutral-100" href="../pages/story.html"
-              >品牌故事</a
-            >
-          </li>
-          <li class="nav-item p-4 me-8 fs-6">
-            <a class="nav-link text-neutral-100" href="news.html">最新消息</a>
-          </li>
-          <!-- Dropdown -->
-          <li class="nav-item dropdown p-4">
-            <a
-              class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100"
-              href="#"
-              id="productList"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              >商品列表</a
-            >
-            <ul
-              class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6"
-              aria-labelledby="productList"
-            >
-              <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
-                  >經典口味</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
-                  >季節限定</a
-                >
-              </li>
-              <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
-                  >甜甜禮盒</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- 會員 + 購物車 (桌機模式) -->
-    <div
-      class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
-    >
-      <a
-        href="../pages/login.html"
-        class="headerBtn bg-primary-20 p-3 br-12 me-8"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          class="bi bi-person text-primary-40"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-          />
-        </svg>
-      </a>
-      <a href="#" class="headerBtn bg-primary-20 p-3 br-12">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          fill="currentColor"
-          class="bi bi-cart2 text-primary-40"
-          viewBox="0 0 16 16"
-        >
-          <path
-            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
-          />
-        </svg>
-      </a>
-    </div>
-  </div>
-  <!-- Modal (行動版選單) -->
-  <div
-    class="modal fade d-lg-none"
-    id="modal-menu"
-    tabindex="-1"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-fullscreen-sm-down">
-      <div class="modal-content p-3 modal-height">
-        <div
-          class="modal-header p-0 border-0 header-height align-items-start bg-primary-tint br-tl-40"
-        >
-          <button
-            type="button"
-            class="btn ms-auto p-0"
-            data-bs-dismiss="modal"
-            aria-label="關閉"
-          >
-            <div class="position-relative">
-              <div
-                class="bg-neutral-white br-bl-32 position-relative position-absolute top-0 end-0"
-              >
-                <span class="material-symbols-outlined text-primary-40 m-7">
-                  close
-                </span>
-                <img
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
-                  alt="corner"
-                  class="position-absolute start-0"
-                  style="transform: translateX(-100%) rotate(-90deg)"
-                />
 
-                <div>
-                  <img
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
-                    alt="corner"
-                    class="position-absolute"
-                    style="transform: rotate(-90deg)"
-                  />
+    <main class="news-bg position-relative">
+      <section class="py-lg-12 py-8 container">
+        <div class="d-flex flex-column gap-2 align-items-center align-items-lg-start position-relative mb-6 mb-lg-12">
+          <h1 class="fs-2 fw-bold text-neutral-100">最新消息</h1>
+          <h2 class="text-neutral-60 lh-base fs-lg-9 fs-7" style="letter-spacing: 0.04rem;">甜甜報你知，第一手掌握最新資訊與優惠!</h2>
+          <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2076.96%2075.13'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23ffd792;}.cls-2{fill:%23fbefca;}%3c/style%3e%3c/defs%3e%3cg%20id='圖層_1'%20data-name='圖層%201'%3e%3cpath%20class='cls-1'%20d='M40.55,21.64a1.42,1.42,0,0,1-.9,1.32l-8.38,3.21a10.92,10.92,0,0,0-6.34,6.47l-3.18,8.78c0,.06-.08.11-.11.17a1.1,1.1,0,0,1-.09.14.93.93,0,0,1-.16.18,1.46,1.46,0,0,1-.33.22,1,1,0,0,1-.23.07l-.23,0-.24,0a.88.88,0,0,1-.23-.07,1.33,1.33,0,0,1-.34-.22l-.16-.18a.75.75,0,0,1-.07-.12,2.14,2.14,0,0,1-.13-.19l-3.18-8.78a10.89,10.89,0,0,0-6.34-6.47L1.54,23a1.4,1.4,0,0,1,.07-2.65L9.28,17.9a10.93,10.93,0,0,0,7-6.91l3.12-9.21a1.32,1.32,0,0,1,.15-.29.61.61,0,0,1,.13-.16,1.07,1.07,0,0,1,.43-.28L20.32,1a.8.8,0,0,1,.27,0,.86.86,0,0,1,.28,0l.16.05a1.18,1.18,0,0,1,.4.25.79.79,0,0,1,.12.15,1,1,0,0,1,.19.33L24.85,11a11,11,0,0,0,7,6.91l7.67,2.41A1.39,1.39,0,0,1,40.55,21.64Z'/%3e%3cpath%20class='cls-2'%20d='M75.24,55.68a1.21,1.21,0,0,1-.78,1.14l-7.28,2.8a9.47,9.47,0,0,0-5.51,5.62L58.9,72.87s-.06.09-.09.15l-.08.12a1.07,1.07,0,0,1-.14.16,1.45,1.45,0,0,1-.29.19,1.17,1.17,0,0,1-.2.06l-.19,0-.22,0-.2-.06a1.15,1.15,0,0,1-.29-.2,1,1,0,0,1-.14-.15L57,73a.82.82,0,0,1-.11-.17l-2.77-7.63a9.42,9.42,0,0,0-5.51-5.62l-7.28-2.8a1.23,1.23,0,0,1-.78-1.14,1.21,1.21,0,0,1,.85-1.16l6.66-2.1a9.48,9.48,0,0,0,6.13-6l2.72-8a1.15,1.15,0,0,1,.12-.25.53.53,0,0,1,.12-.14,1,1,0,0,1,.37-.25l.14,0a.93.93,0,0,1,.24,0l.24,0,.14,0a1.18,1.18,0,0,1,.35.23l.1.12a.83.83,0,0,1,.16.29l2.71,8a9.5,9.5,0,0,0,6.13,6l6.66,2.1A1.21,1.21,0,0,1,75.24,55.68Z'/%3e%3c/g%3e%3c/svg%3e" alt="" class="img-fluid position-absolute top-0 news-deco-img-bright">
+        </div>        
+        <!-- 手風琴 -->
+        <div class="accordion d-flex flex-column gap-lg-6 gap-5 pb-12">
+          <!-- 最新消息-1 -->
+          <div class="accordion-item shadow rounded-4 border-0 overflow-hidden p-lg-8 p-5 animate__animated animate__slideInUp animate__faster" id="news-title-1">
+            <!-- 收合 -->
+            <button class="news-accordion-btn" data-bs-toggle="collapse" data-bs-target="#news-list-1" aria-expanded="false" aria-controls="news-list-1">
+              <div class="d-flex gap-5 flex-column flex-lg-row">
+                <div class="news-img rounded-4 overflow-hidden flex-shrink-0">
+                  <img src="/TenTenPanda/assets/ad-news-1-Dsv3MYpr.png" alt="">
                 </div>
-              </div>
-            </div>
-          </button>
-        </div>
-        <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <button
-                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
-                type="button"
-              >
-                品牌故事
-              </button>
-            </li>
-            <li class="nav-item">
-              <button
-                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
-                type="button"
-              >
-                最新消息
-              </button>
-            </li>
-            <!-- 下拉選單 -->
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-4 fw-400"
-                id="productList"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                <span class="py-3 ps-1 text-neutral-100">商品列表</span>
-                <span class="material-symbols-outlined" id="dropdownIcon"
-                  >keyboard_arrow_down</span
-                >
-              </a>
-
-              <ul
-                class="dropdown-menu border-0 bg-primary-tint"
-                aria-labelledby="productList"
-              >
-                <li>
-                  <a
-                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
-                    href="#"
-                    >經典口味</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
-                    href="#"
-                    >季節限定</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item mx-4 py-3 ps-1 text-neutral-100"
-                    href="#"
-                    >甜甜禮盒</a
-                  >
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-        <div
-          class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
-        >
-          <button
-            type="button"
-            class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4"
-          >
-            登入／註冊
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-    </div>
-
-    <main class="login-bg border-top border-bottom border-lg-0 position-relative">
-      <!-- 背景裝飾圖片 -->
-      <img src="/TenTenPanda/assets/graphic-1-0kW5J_M4.png" alt="" class="password-donut-1 position-absolute d-lg-flex d-none">
-      <img src="/TenTenPanda/assets/graphic-2-DcMjd-D-.png" alt="" class="password-donut-2 position-absolute d-lg-flex d-none">
-      <img src="/TenTenPanda/assets/graphic-3-DzV22eMY.svg" alt="" class="password-donut-3 position-absolute d-lg-flex d-none">
-      <img src="data:image/svg+xml,%3csvg%20width='300'%20height='240'%20viewBox='0%200%20300%20240'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20opacity='0.6'%3e%3cpath%20d='M44.3086%2050.6716C46.8009%2054.3445%2044.8333%2056.0498%2043.9151%2058.0175C42.2098%2061.8216%2040.2421%2065.6257%2038.1433%2069.1675C27.1245%2087.6634%2028.6986%20107.865%2034.6015%20126.492C39.0615%20140.134%2044.1774%20154.301%2053.0974%20166.238C59.1315%20174.458%2065.1219%20182.766%2071.0686%20191.162C77.1901%20199.907%2085.3668%20205.635%2095.5986%20208.346C104.256%20210.576%20112.52%20213.855%20120.784%20217.266C158.694%20233.007%20192.538%20222.25%20224.807%20201.393C231.366%20197.196%20237.663%20192.604%20243.828%20187.882C253.797%20180.143%20260.225%20170.042%20263.504%20157.712C269.67%20134.362%20272.293%20111.275%20264.423%2087.5322C253.273%2053.6887%20231.497%2031.9134%20196.998%2022.8622C169.976%2015.6475%20142.953%2011.1875%20115.275%2017.7463C104.65%2020.2387%2094.8115%2025.0922%2084.7109%2029.1587C82.8745%2029.9457%2081.038%2032.1757%2078.5456%2029.8146C79.0703%2026.9287%2081.9562%2026.7975%2083.9239%2025.8793C115.406%209.74457%20148.463%207.38339%20182.569%2015.6475C192.013%2018.0087%20201.589%2020.2387%20210.771%2023.7804C247.501%2037.6851%20265.078%2066.6751%20271.637%20103.405C276.228%20128.59%20270.981%20152.858%20259.438%20175.683C257.339%20179.749%20254.453%20183.16%20251.174%20186.177C227.693%20206.772%20200.933%20221.988%20170.238%20227.891C151.873%20231.433%20133.509%20226.317%20116.193%20219.364C108.979%20216.347%20101.633%20213.724%2094.1556%20211.494C83.7927%20208.608%2075.2662%20202.967%2068.8386%20194.047C57.1639%20177.65%2045.7515%20161.384%2037.0939%20142.626C30.2727%20127.41%2029.4857%20111.931%2026.2062%2096.4522C25.288%2091.7298%2027.6492%2087.2698%2029.0921%2082.941C32.7651%2071.791%2037.4874%2061.1657%2044.3086%2050.6716Z'%20fill='%23F06B04'/%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M203.82%20101.568C203.426%20111.669%20197.13%20122.425%20190.44%20132.919C188.472%20136.067%20184.799%20137.248%20180.995%20136.33C171.157%20134.231%20161.975%20130.427%20156.99%20121.113C151.087%20109.701%20140.986%20104.979%20129.705%20101.83C123.54%20100.125%20118.949%2096.8456%20116.456%2090.6804C113.308%2082.6786%20116.194%2067.7245%20123.409%2063.1333C127.738%2060.3786%20133.509%2058.8045%20139.019%2059.198C150.3%2060.1163%20161.581%2060.641%20172.862%2062.2151C190.178%2064.7074%20203.82%2081.2357%20203.82%20101.568ZM200.409%2099.8627C200.278%2083.0721%20187.948%2068.5115%20172.6%2065.7568C161.45%2063.658%20150.169%2063.1333%20138.888%2062.871C132.853%2062.7398%20126.163%2063.3957%20122.359%2070.0857C115.669%2081.8915%20116.85%2095.6651%20134.165%2099.7315C144.528%20102.093%20153.71%20107.471%20159.089%20117.965C163.549%20126.492%20171.55%20130.952%20180.995%20132.657C183.75%20133.182%20186.636%20133.05%20188.079%20130.427C193.85%20120.457%20200.147%20110.619%20200.409%2099.8627Z'%20fill='%23F06B04'/%3e%3cpath%20d='M207.493%20200.606C192.145%20219.233%2087.3353%20198.638%2077.4971%20174.895C96.9112%20186.832%20116.325%20197.457%20139.675%20200.212C162.368%20202.836%20184.668%20208.739%20207.493%20200.606Z'%20fill='%23F06B04'/%3e%3cpath%20d='M62.8059%20158.761C58.3459%20160.335%2056.6406%20157.449%2054.4106%20155.743C58.0836%20153.776%2060.4448%20155.088%2062.8059%20158.761Z'%20fill='%23F06B04'/%3e%3c/g%3e%3c/svg%3e" alt="" class="password-donut-4 position-absolute d-lg-flex d-none">
-      <img src="/TenTenPanda/assets/graphic-5-CACpZVZ4.svg" alt="" class="password-donut-5 position-absolute d-lg-flex d-none">
-      <div class="login container py-lg-14 py-8 px-3 px-lg-0">
-        <div class="row d-lg-flex justify-content-center">
-          <form class="col-lg-8 ps-lg-5 px-3" id="letterForm">
-            <!-- 內容：白底背景 -->
-            <div
-              class="card br-lg-24 border-0 d-flex flex-column justify-content-center align-items-center px-lg-8 py-lg-18 h-100 w-100"
-            >
-              
-              <h4 class="fs-2 fw-bold mb-lg-10 text-neutral-100 mb-6">
-                查詢帳號密碼
-              </h4>
-              <!-- 電子信箱 -->
-              <div class="w-100 mb-8 mb-lg-6">
-                <p class="fs-lg-9 fs-7 text-neutral-100 ps-2 mb-2">
-                  請輸入電子信箱<span class="text-primary-40">*</span>
-                </p>
-                <div class="form-floating">
-                  <input
-                    type="email"
-                    class="form-control br-8 input-bg px-5"
-                    id="emailFindInput"
-                    placeholder="name@example.com"
-                    required
-                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$"
-                  />
-                  <label for="emailFindInput" class="px-5"
-                    >例如：example@email.com</label
-                  >
-                </div>
-              </div>
-
-              <!-- 驗證信按鈕 -->
-              <div class="w-100 mb-8 mb-lg-6">
-                <div class="mb-2">
-                  <!-- 發送驗證信按鈕 -->
-                  <button
-                    type="button"
-                    class="btn login-btn fs-6 br-8 w-100 py-4"
-                    data-bs-toggle="modal"
-                    data-bs-target="#letterModal"
-                    id="letterBtn"
-                    disabled
-                  >
-                    送出驗證信
-                  </button>
-                  <!-- 發送驗證信畫面 -->
-                  <div
-                    class="modal fade"
-                    id="letterModal"
-                    tabindex="-1"
-                    aria-labelledby="letterModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog modal-dialog-centered mx-auto">
-                      <div
-                        class="modal-content br-32 p-10 d-flex border-0 justify-content-center align-items-center shadow"
-                      >
-                        <div class="modal-body p-0 text-center">
-                          <!-- 驚嘆號圖標 -->
-                          <span
-                            class="badge rounded-circle bg-primary-20 p-lg-6 p-4 mb-5"
-                          >
-                            <span
-                              class="material-symbols-outlined check-icon fw-bold text-primary-40 d-flex justify-content-center align-items-center"
-                            >
-                              exclamation
-                            </span>
-                          </span>
-                          <p class="text-neutral-100 fw-bold fs-lg-5 fs-6">
-                            已送出驗證信至您的電子信箱
-                          </p>
-                        </div>
-                      </div>
+                <div class="d-flex flex-column justify-content-between gap-2">
+                  <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-10-03">2025/10/03</time></p>
+                  <h2 class="fw-bold fs-lg-4 fs-5 news-font-hover">甜甜圈原來要這樣吃！網友激推這種方法！</h2>
+                  <div class="d-flex">
+                    <div class="text-neutral-100 fs-7 lh-base d-flex gap-2 flex-column text-neutral-100 news-preview-height">
+                      <p class="" style="letter-spacing: 0.04rem;">最新話題美食「雪夜莓語」冬季限定系列，不只賣造型，更主打吃法有撇步，讓冬天的甜味瞬間翻倍。</p> 
+                      <p>首先，大推「微波加熱 8 秒」或「烤箱低溫回烤 2～3 分鐘」——讓北海道奶油緩緩融化，草莓果醬微微溫熱，香氣瞬間爆發！接著，不少老饕分享，搭配黑咖啡或熱紅茶更能凸顯大湖草莓的酸甜，減去甜膩感；也有人選擇用冰牛奶中和熱甜甜圈的溫度，吃起來外熱內涼，層次更豐富。</p>
                     </div>
+                    <span class="ms-2 mb-2 align-self-end d-lg-none d-block"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>
+                  </div>
+                  <p class="d-lg-block d-none">...</p>                               
+                </div> 
+                <span class="ms-2 mb-2 align-self-end d-lg-block d-none"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>   
+              </div>
+            </button>
+            <!-- 展開 -->
+            <div id="news-list-1" class="accordion-collapse collapse">
+              <div class="accordion-body px-lg-10 py-lg-10 p-2">
+                <div class="news-img-open rounded-4 overflow-hidden">
+                  <img src="/TenTenPanda/assets/ad-news-1-Dsv3MYpr.png" alt="" class="img-fluid">
+                </div>
+                <div class="d-flex flex-column mt-lg-8 mt-5">
+                  <div class="d-flex justify-content-lg-between align-items-lg-start flex-lg-row-reverse flex-column gap-2">
+                    <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-10-03">2025/10/03</time></p>
+                    <h2 class="text-neutral-100 fw-bold fs-lg-3 fs-5">甜甜圈原來要這樣吃！網友激推這種方法！ 🤩</h2>
+                  </div>
+                  <div class="d-flex gap-lg-12 justify-content-lg-between flex-lg-row flex-column justify-content-start">
+                    <div class="d-flex gap-5 flex-column mt-5 fs-9 lh-base">
+                      <p><span class="fw-bold">\ 冬天就是要吃甜甜圈 / </span>跟著這三招，甜味瞬間翻倍，幸福感滿分✨</p>
+                      <p>最新話題美食「雪夜莓語」冬季限定系列，不只賣造型，更主打吃法有撇步，讓冬天的甜味瞬間翻倍😋<br>TENTEN小當家一致認證：「加熱、搭飲品、控制溫度」三招學起來，草莓甜甜圈才真香<br>現在就公開美味的秘密！</p>
+                      <ul>
+                        <li>秘訣1：<span class="fw-bold">微波 8 秒 🔥</span> - 快速加熱，奶油慢慢融化，草莓果醬微微溫熱，香氣撲鼻</li>
+                        <li>秘訣2：<span class="fw-bold">烤箱低溫回烤 2～3 分鐘 🍰</span> - 外層微酥、內餡柔軟，口感層次更分明</li>
+                        <li>秘訣3：<span class="fw-bold">搭配熱飲或牛奶 ☕️🥛</span> - 熱紅茶、黑咖啡或冰牛奶都能平衡甜度，吃起來外熱內涼，層次更豐富</li>
+                      </ul>                                          
+                      <p>秘訣MAX：<span class="fw-bold">「微波加熱 8 秒」或「烤箱低溫回烤 2～3 分鐘」</span>——讓北海道奶油緩緩融化，草莓果醬微微溫熱，香氣瞬間爆發！<br>搭配黑咖啡或熱紅茶更能凸顯大湖草莓的酸甜，減去甜膩感<br>選擇用冰牛奶中和熱甜甜圈的溫度，吃起來外熱內涼，層次更豐富</p>
+                      <ul>
+                        <li><span class="fw-bold">冬日限定｜TENTEN 熱銷TOP.3</span></li>
+                        <li><span class="fw-bold">🥇 雪莓蒙布朗</span>：口感綿密濃郁，回烤後更能嚐到栗香與果香的融合。</li>
+                        <li><span class="fw-bold">🥈 熱紅酒莓果</span>：濃郁果香與熱紅酒香氣交織，冬天必吃經典款。</li>
+                        <li><span class="fw-bold">🥉 冰霜莓果夾心 ❄️</span>：建議冷藏後直接享用，外層糖霜酥脆、內餡清爽，冰涼口感超療癒 💖</li>
+                      </ul> 
+                      <div class="d-flex justify-content-between">
+                        <p>冬夜裡，一口甜甜圈、一口熱飲，<br class="d-block d-lg-none">是最幸福的小確幸<br><a href="productList-seasonal.html" class="fw-bold rounded-pill news-link-font-hover" target="_blank">前往季節限定商品 >></a></p>                        
+                        <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-none d-block" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-1" aria-expanded="true" aria-controls="news-title-1">
+                          <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                        </button>                        
+                      </div>                     
+                    </div>
+                    <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-block d-none mb-3" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-1" aria-expanded="true" aria-controls="news-title-1">
+                      <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                    </button>                  
                   </div>
                 </div>
               </div>
-            
             </div>
-          </form>
-        </div>
-      </div>
+          </div>
+          <!-- 最新消息-2 -->
+          <div class="accordion-item shadow rounded-4 border-0 overflow-hidden p-lg-8 p-5 animate__animated animate__slideInUp animate__fast" id="news-title-2">
+            <!-- 收合 -->
+            <button class="news-accordion-btn" data-bs-toggle="collapse" data-bs-target="#news-list-2" aria-expanded="false" aria-controls="news-list-2">
+              <div class="d-flex gap-5 flex-column flex-lg-row">
+                <div class="news-img rounded-4 overflow-hidden flex-shrink-0">
+                  <img src="/TenTenPanda/assets/ad-news-2-yBp8mkGK.jpg" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-between gap-2">
+                  <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-10-01">2025/10/01</time></p>
+                  <h2 class="fw-bold fs-lg-4 fs-5 news-font-hover">冬季限定の北海道奶油Ｘ大湖草莓 \ 溫暖上市！ /🍓</h2>
+                  <div class="d-flex">
+                    <div class="text-neutral-100 fs-7 lh-base d-flex gap-2 flex-column text-neutral-100 news-preview-height">
+                      <p style="letter-spacing: 0.04rem;">草莓的季節又來囉！冷冷的天有甜甜熊貓帶給您味蕾的甜蜜驚喜！</p> 
+                      <p style="letter-spacing: 0.04rem;">本季活動從 2025/10/11至2026/01/11，我們以「雪夜莓語」為主題，嚴選台灣大湖新鮮草莓搭配北海道奶油，打造 6 款冬季限定草莓甜甜圈，陪大家一起度過最冷卻最暖心的季節。</p>
+                    </div>
+                    <span class="ms-2 mb-2 align-self-end d-lg-none d-block"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>
+                  </div>
+                  <p class="d-lg-block d-none">...</p>                               
+                </div> 
+                <span class="ms-2 mb-2 align-self-end d-lg-block d-none"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>   
+              </div>
+            </button>
+            <!-- 展開 -->
+            <div id="news-list-2" class="accordion-collapse collapse">
+              <div class="accordion-body px-lg-10 py-lg-10 p-2">
+                <div class="news-img-open rounded-4 overflow-hidden">
+                  <img src="/TenTenPanda/assets/ad-news-2-yBp8mkGK.jpg" alt="" class="img-fluid">
+                </div>
+                <div class="d-flex flex-column mt-lg-8 mt-5">
+                  <div class="d-flex justify-content-lg-between align-items-lg-start flex-lg-row-reverse flex-column gap-2">
+                    <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-10-01">2025/10/01</time></p>
+                    <h2 class="text-neutral-100 fw-bold fs-lg-3 fs-5">冬季限定の北海道奶油Ｘ大湖草莓 \ 溫暖上市！ / 🍓</h2>
+                  </div>
+                  <div class="d-flex gap-lg-12 justify-content-lg-between flex-lg-row flex-column justify-content-start">
+                    <div class="d-flex gap-5 flex-column mt-5 fs-9 lh-base">
+                      <p>草莓的季節又來囉！冷冷的天有甜甜熊貓帶給您味蕾的甜蜜驚喜！</p>
+                      <p><span class="fw-bold">期間限定 : 2025/10/11 - 2026/01/11 </span><br>嚴選台灣大湖新鮮草莓搭配北海道奶油，打造 6 款冬季限定草莓甜甜圈<br>陪大家一起度過最冷卻最暖心的季節💕</p>
+                      
+                      <ul>
+                        <li><span class="fw-bold">✨冬季星塵草莓</span>：粉嫩草莓糖霜配上閃閃銀白糖珠，好像冬夜裡的星光，酸甜不膩</li>
+                        <li><span class="fw-bold">✨白雪綿霜莓</span>：鬆軟圈體淋上北海道奶油霜，撒上雪白糖粉，一口咬下奶香滿滿又吃得到草莓香氣</li>
+                        <li><span class="fw-bold">✨暖心莓果可可</span>：濃郁可可醬結合微酸草莓，再灑些微融棉花糖，就像冬夜裡的一杯熱可可，暖胃又暖心</li>
+                        <li><span class="fw-bold">✨雪莓蒙布朗</span>：栗子奶油搭配草莓奶油做成蒙布朗造型，外表夢幻、內餡酸甜滑順，每一口都很有層次</li>
+                        <li><span class="fw-bold">✨熱紅酒莓果</span>：靈感來自冬季熱紅酒，融合肉桂與果乾的香氣，加上大湖草莓果香，微微辛香暖身剛剛好</li>
+                        <li><span class="fw-bold">✨冰霜莓果夾心</span>：外層薄薄糖霜加上草莓碎果粒，裡面是滿滿草莓果醬，綿軟柔和，口感很有驚喜感</li>
+                      </ul>
+                      
+                      <p>🍓只在這個冬天限定上市，售完為止！用酸甜草莓和香濃奶油，替寒冷冬夜留下一段溫暖的味覺記憶</p>
+
+                      <div class="d-flex justify-content-between">
+                        <p>快來店裡嚐嚐這 6 款只屬於冬天的甜蜜滋味吧！<br><a href="productList-seasonal.html" class="fw-bold rounded-pill news-link-font-hover news-link" target="_blank">前往季節限定商品 >></a></p>                        
+                        <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-none d-block" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-2" aria-expanded="true" aria-controls="news-title-2">
+                          <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                        </button>                        
+                      </div>                     
+                    </div>
+                    <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-block d-none mb-3" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-2" aria-expanded="true" aria-controls="news-title-2">
+                      <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                    </button>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 最新消息-3 -->
+          <div class="accordion-item shadow rounded-4 border-0 overflow-hidden p-lg-8 p-5 animate__animated animate__slideInUp" id="news-title-3">
+            <!-- 收合 -->
+            <button class="news-accordion-btn" data-bs-toggle="collapse" data-bs-target="#news-list-3" aria-expanded="false" aria-controls="news-list-3">
+              <div class="d-flex gap-5 flex-column flex-lg-row w-100">
+                <div class="news-img rounded-4 overflow-hidden flex-shrink-0">
+                  <img src="/TenTenPanda/assets/ad-news-3-CSzxeNhb.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-between gap-2">
+                  <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-08-23">2025/08/23</time></p>
+                  <h2 class="fw-bold fs-lg-4 fs-5 news-font-hover">來自法國的焦糖可可甜甜 - 8/23 起全門市熱烈販售</h2>
+                  <div class="d-flex">
+                    <div class="text-neutral-100 fs-7 lh-base d-flex gap-2 flex-column text-neutral-100 news-preview-height">
+                      <p style="letter-spacing: 0.04rem;">‼滿額免運優惠中‼ 選用法國進口苦甜可可粉慢火熬煮</p> 
+                      <p style="letter-spacing: 0.04rem;">冬天濃純可可搭配香甜焦糖，表層烘培出微微焦香，甜而不膩、溫柔而濃厚，午後搭配拿鐵享用，讓午後時光更加迷人！<br>來一杯熱牛奶，度過你的溫柔時光吧！</p>
+                    </div>
+                    <span class="ms-2 mb-2 align-self-end d-lg-none d-block"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>
+                  </div>
+                  <p class="d-lg-block d-none">...</p>                               
+                </div> 
+                <span class="ms-auto mb-2 align-self-end d-lg-block d-none"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>   
+              </div>
+            </button>
+            <!-- 展開 -->
+            <div id="news-list-3" class="accordion-collapse collapse">
+              <div class="accordion-body px-lg-10 py-lg-10 p-2">
+                <div class="news-img-open rounded-4 overflow-hidden">
+                  <img src="/TenTenPanda/assets/ad-news-3-CSzxeNhb.png" alt="" class="img-fluid">
+                </div>
+                <div class="d-flex flex-column mt-lg-8 mt-5">
+                  <div class="d-flex justify-content-lg-between align-items-lg-start flex-lg-row-reverse flex-column gap-2">
+                    <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-08-23">2025/08/23</time></p>
+                    <h2 class="text-neutral-100 fw-bold fs-lg-3 fs-5">來自法國的焦糖可可甜甜 - 8/23 起全門市熱烈販售</h2>
+                  </div>
+                  <div class="d-flex gap-lg-12 justify-content-lg-between flex-lg-row flex-column justify-content-start">
+                    <div class="d-flex gap-5 flex-column mt-5 fs-9 lh-base">
+                      <p>🎉 08/23起 \全門市熱烈販售/ 🎉 </p>
+                      <p><span class="fw-bold">焦糖可可甜甜🍫療癒新登場</span><br>選用法國進口苦甜可可粉，與慢火熬煮的手工焦糖醬融合製成特製內餡<br>外層以微烘焙可可粒與可可糖粉，搭配高純度可可豆壓模製成可愛外表🐼</p>                    
+                      <p>濃醇可可搭配香甜焦糖，表層烘焙出微微焦香，甜而不膩、溫柔而濃厚💛<br>午後搭配拿鐵☕️享用，讓午後時光更加迷人🥛！</p>
+                      <p>網路商城<span class="fw-bold"> ‼ 滿額免運優惠中‼ </span> <br>數量有限，手刀把握最新出爐的好吃甜甜圈吧！😋<br>※單筆消費限折扣乙次</p>                    
+                      <div class="d-flex justify-content-between">
+                        <a href="item_details-caramelcocoa.html.html" class="fw-bold rounded-pill news-link-font-hover news-link" target="_blank">享用迷人的午後時光 >></a>                        
+                        <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-none d-block" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-3" aria-expanded="true" aria-controls="news-title-3">
+                          <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                        </button>                        
+                      </div>                     
+                    </div>
+                    <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-block d-none mb-3" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-3" aria-expanded="true" aria-controls="news-title-3">
+                      <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                    </button>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 最新消息-4 -->
+          <div class="accordion-item shadow rounded-4 border-0 overflow-hidden p-lg-8 p-5 animate__animated animate__slideInUp" id="news-title-4">
+            <!-- 收合 -->
+            <button class="news-accordion-btn" data-bs-toggle="collapse" data-bs-target="#news-list-4" aria-expanded="false" aria-controls="news-list-4">
+              <div class="d-flex gap-5 flex-column flex-lg-row w-100">
+                <div class="news-img rounded-4 overflow-hidden flex-shrink-0">
+                  <img src="/TenTenPanda/assets/ad-news-4-BJxJdMc9.png" alt="">
+                </div>
+                <div class="d-flex flex-column justify-content-between gap-2">
+                  <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-06-20">2025/06/20</time></p>
+                  <h2 class="fw-bold fs-lg-4 fs-5 news-font-hover">#涼爽登場 加購 \生乳檸檬甜甜/ 滿額免運!!</h2>
+                  <div class="d-flex">
+                    <div class="text-neutral-100 fs-7 lh-base d-flex gap-2 flex-column text-neutral-100 news-preview-height">
+                      <p style="letter-spacing: 0.04rem;">生乳檸檬甜甜 6/20 起，全門市清爽登場！</p> 
+                      <p style="letter-spacing: 0.04rem;">選用新鮮檸檬製成果泥，結合滑順法式生乳內餡，酸中帶甜、柔和清新，<br>不僅不膩口，還能讓你在每一口裡，感受到夏天的微風與陽光。</p>
+                      <p class="d-lg-block d-none">推薦冰冰吃更對味，搭配冷萃咖啡或氣泡飲也超級剛好！</p>
+                    </div>
+                    <span class="ms-2 mb-2 align-self-end d-lg-none d-block"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>
+                  </div>
+                  <p class="d-lg-block d-none">...</p>                               
+                </div> 
+                <span class="ms-auto mb-2 align-self-end d-lg-block d-none"><i class="bi bi-caret-down-fill btn rounded-circle px-2 py-1 btn-outline-primary-40 news-btn-hover fw-bold"></i></span>   
+              </div>
+            </button>
+            <!-- 展開 -->
+            <div id="news-list-4" class="accordion-collapse collapse">
+              <div class="accordion-body px-lg-10 py-lg-10 p-2">
+                <div class="news-img-open rounded-4 overflow-hidden">
+                  <img src="/TenTenPanda/assets/ad-news-4-BJxJdMc9.png" alt="" class="img-fluid">
+                </div>
+                <div class="d-flex flex-column mt-lg-8 mt-5">
+                  <div class="d-flex justify-content-lg-between align-items-lg-start flex-lg-row-reverse flex-column gap-2">
+                    <p class="text-neutral-60 fs-lg-9 fs-7"><time datetime="2025-06-20">2025/06/20</time></p>
+                    <h2 class="text-neutral-100 fw-bold fs-lg-3 fs-5">#涼爽登場 加購 \生乳檸檬甜甜/ 滿額免運!!</h2>
+                  </div>
+                  <div class="d-flex gap-lg-12 justify-content-lg-between flex-lg-row flex-column justify-content-start">
+                    <div class="d-flex gap-5 flex-column mt-5 fs-9 lh-base">
+                      <p>🎉 6/20 起 全門市熱烈販售 / 新上市！快來嚐鮮🎉</p>
+                      <p><span class="fw-bold">生乳檸檬甜甜圈🍋</span><br>
+                      選用新鮮檸檬製成果泥，結合法式滑順生乳內餡，酸中帶甜、柔和清新。不僅不膩口，每一口都能感受到夏天的微風與陽光☀️🍃</p>                    
+                      <p>推薦冰冰吃更對味，搭配冷萃咖啡或氣泡飲也超級剛好🥤❄️！快帶上好友一起來品嚐這款清爽新甜點吧💛</p>
+                      <p><span class="fw-bold">‼ 滿額免運優惠中‼ </span><br>※單筆消費限折扣乙次</p>
+                      <div class="d-flex justify-content-between">
+                        <a href="item_details-creamlemon.html" class="fw-bold rounded-pill news-link-font-hover news-link" target="_blank">享用夏日的透心涼 >></a>                        
+                        <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-none d-block" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-4" aria-expanded="true" aria-controls="news-title-4">
+                          <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                        </button>                        
+                      </div>                     
+                    </div>
+                    <button class="btn btn-outline-primary-40 rounded-circle news-btn-hover fw-bold align-self-end px-2 py-1 d-lg-block d-none mb-3" type="button"  data-bs-toggle="collapse" data-bs-target="#news-list-4" aria-expanded="true" aria-controls="news-title-4">
+                      <i class="bi bi-caret-up-fill d-block" style="transform: translateY(-2px);"></i>
+                    </button>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>      
+      </section>
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDQuNjEgMTkyLjEzIj48ZGVmcz48c3R5bGU+LmNscy0xe2lzb2xhdGlvbjppc29sYXRlO30uY2xzLTIsLmNscy0ze29wYWNpdHk6MC41O21peC1ibGVuZC1tb2RlOmNvbG9yLWRvZGdlO2ZpbGw6I2ZiZWZjYTtmb250LWZhbWlseTpSdW1waTt9LmNscy0ye2ZvbnQtc2l6ZTo3OS40MnB4O2xldHRlci1zcGFjaW5nOjAuMWVtO30uY2xzLTN7Zm9udC1zaXplOjkwLjUzcHg7bGV0dGVyLXNwYWNpbmc6MC4xZW07fTwvc3R5bGU+PC9kZWZzPjxnIGNsYXNzPSJjbHMtMSI+PGcgaWQ9IuWcluWxpF8xIiBkYXRhLW5hbWU9IuWcluWxpCAxIj48dGV4dCBjbGFzcz0iY2xzLTIiIHRyYW5zZm9ybT0ibWF0cml4KDEsIC0wLjI0LCAtMC4wNywgMSwgOC4yMiwgMTI0LjY4KSI+R29vZDwvdGV4dD48dGV4dCBjbGFzcz0iY2xzLTMiIHRyYW5zZm9ybT0ibWF0cml4KDEsIC0wLjI0LCAtMC4wNywgMSwgMTQ4LjE4LCAxODMuMDUpIj5OZXdzITwvdGV4dD48L2c+PC9nPjwvc3ZnPg==" alt="" class="position-absolute news-deco-img-letter">
     </main>
 
     <footer class="mt-16 mt-lg-10 text-center">
@@ -843,49 +761,6 @@
   <div class="pt-4 pb-5 pt-lg-6 pb-lg-8 fs-T-S">
     <p>B-3 甜甜熊貓 ©2025 All Rights Reserved</p>
   </div>
-</footer>
-    <script>
-      const user = document.getElementById("userHeader");
-      const guest = document.getElementById("guestHeader");
-      let login_state = localStorage.getItem("isLogin") === "true";
-      function updateUI() {
-        let login_state = localStorage.getItem("isLogin");
-        if (login_state) {
-          guest.style.display = "none";
-          user.style.display = "block";
-        } else {
-          guest.style.display = "block";
-          user.style.display = "none";
-        }
-      }
-      updateUI();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const emailInput = document.getElementById("emailFindInput");
-        const letterBtn = document.getElementById("letterBtn");
-      
-        // 即時檢查 email 格式
-        emailInput.addEventListener("input", () => {
-          if (emailInput.checkValidity()) {
-            letterBtn.disabled = false;
-          } else {
-            letterBtn.disabled = true;
-          }
-        });
-      
-        // Modal 出現後 → 延遲 1.5 秒跳轉
-        const letterModal = document.getElementById("letterModal");
-        letterModal.addEventListener("shown.bs.modal", () => {
-          setTimeout(() => {
-            window.location.href = "login.html";
-          }, 1500);
-        });
-      });
-    </script>
-
+</footer>
   </body>
 </html>
