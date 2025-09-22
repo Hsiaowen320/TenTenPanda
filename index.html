@@ -32,14 +32,13 @@
       rel="stylesheet"
     />
     <title>甜甜熊貓｜TenTen Donut - 甜點專賣</title>
-    <script type="module" crossorigin src="/TenTenPanda/assets/main-yVC6fDzr.js"></script>
-    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-BV6bp2Mm.css">
+    <script type="module" crossorigin src="/TenTenPanda/assets/main-B6od55cK.js"></script>
+    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-DMdOrbCc.css">
   </head>
   <body>
-    <!-- 這裡先用 true (登入成功) /  false (未登入) 切換版型 -->
     
-    <!-- 登入成功時顯示 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+    <div id="userHeader">
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
   <div
     class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
   >
@@ -94,7 +93,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
           <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="#">品牌故事</a>
           </li>
-          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="#">最新消息</a></li>
+          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="news.html">最新消息</a></li>
           <!-- Dropdown -->
           <li class="nav-item dropdown p-4">
             <a class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100" href="#" id="productList" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品列表</a>
@@ -132,7 +131,7 @@
             <li><a class="dropdown-item p-4 text-neutral-100" href="#">個人資訊</a></li>
             <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的收藏</a></li>
             <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的訂單</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">登出</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="#" id="logoutBtn">登出</a></li>
           </ul>
         </li> 
       </ul>     
@@ -221,9 +220,9 @@
               </button>
             </li>
             <li class="nav-item">
-              <button class="nav-link mb-6 py-3 ps-1 text-neutral-100" type="button">
+              <a class="nav-link mb-6 py-3 ps-1 text-neutral-100" href="news.html">
                 最新消息
-              </button>
+              </a>
             </li>
             <!-- 下拉選單 -->
             <li class="nav-item dropdown">
@@ -291,13 +290,13 @@
                   <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#">我的訂單</a>
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="#">登出</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="#" id="logoutBtn">登出</a>
                 </li>                
               </ul>
             </li>            
           </ul>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
   <!-- Modal (購物車清單) -->
@@ -371,7 +370,7 @@
             <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
           </div> 
           <div class="modal-footer border-0 p-0 py-4">
-            <button class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6">立即購買</button>
+            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
           </div>
         </div>
         <!-- 桌面版 -->
@@ -438,12 +437,258 @@
             <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
           </div>   
           <div class="modal-footer border-0 p-0">
-            <button class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6">立即購買</button>
+            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
           </div>
         </div>
       </div>
   </div>  
-</nav> 
+</nav>    </div>
+    <div id="guestHeader">
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+  <div
+    class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
+  >
+    <!-- LOGO -->
+    <div class="order-0 mx-lg-auto">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" />
+      </a>
+    </div>
+    <!-- 購物車 + 漢堡選單 (行動裝置) -->
+    <div class="d-flex order-1 align-items-center order-lg-0">
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 d-lg-none me-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+      <button
+        class="navbar-toggler headerBtn bg-primary-20 p-0 border-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="material-symbols-outlined text-primary-40 p-4">
+          menu
+        </span>
+      </button>
+
+      <!-- 導航選單 -->
+      <div class="collapse navbar-collapse position-absolute start-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="../pages/story.html"
+              >品牌故事</a
+            >
+          </li>
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="news.html">最新消息</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown p-4">
+            <a
+              class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100"
+              href="#"
+              id="productList"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >商品列表</a
+            >
+            <ul
+              class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6"
+              aria-labelledby="productList"
+            >
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >經典口味</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >季節限定</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >甜甜禮盒</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 會員 + 購物車 (桌機模式) -->
+    <div
+      class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
+    >
+      <a
+        href="../pages/login.html"
+        class="headerBtn bg-primary-20 p-3 br-12 me-8"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+          />
+        </svg>
+      </a>
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- Modal (行動版選單) -->
+  <div
+    class="modal fade d-lg-none"
+    id="modal-menu"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content p-3 modal-height">
+        <div
+          class="modal-header p-0 border-0 header-height align-items-start bg-primary-tint br-tl-40"
+        >
+          <button
+            type="button"
+            class="btn ms-auto p-0"
+            data-bs-dismiss="modal"
+            aria-label="關閉"
+          >
+            <div class="position-relative">
+              <div
+                class="bg-neutral-white br-bl-32 position-relative position-absolute top-0 end-0"
+              >
+                <span class="material-symbols-outlined text-primary-40 m-7">
+                  close
+                </span>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                  alt="corner"
+                  class="position-absolute start-0"
+                  style="transform: translateX(-100%) rotate(-90deg)"
+                />
+
+                <div>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                    alt="corner"
+                    class="position-absolute"
+                    style="transform: rotate(-90deg)"
+                  />
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+                type="button"
+              >
+                品牌故事
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+                type="button"
+              >
+                最新消息
+              </button>
+            </li>
+            <!-- 下拉選單 -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-4 fw-400"
+                id="productList"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="py-3 ps-1 text-neutral-100">商品列表</span>
+                <span class="material-symbols-outlined" id="dropdownIcon"
+                  >keyboard_arrow_down</span
+                >
+              </a>
+
+              <ul
+                class="dropdown-menu border-0 bg-primary-tint"
+                aria-labelledby="productList"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="#"
+                    >經典口味</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="#"
+                    >季節限定</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 text-neutral-100"
+                    href="#"
+                    >甜甜禮盒</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
+        >
+          <button
+            type="button"
+            class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4"
+          >
+            登入／註冊
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </div>
 
     <!-- section 1 雪夜莓語主視覺 -->
     <section>
@@ -688,7 +933,7 @@
                         class="recommend-commodity col-6 col-lg-4 flex-shrink-1"
                       >
                         <a
-                          href="#"
+                          href="./item_details-starberry.html"
                           class="card bg-transparent border-0 h-100 align-items-center text-center"
                         >
                           <img
@@ -1145,12 +1390,15 @@
                 </a>
               </label>
             </div>
-            <button
-              type="button"
-              class="btn more-btn btn-pd-16-32 fs-6 border-radius-4 align-self-lg-end align-self-center"
-            >
-              瀏覽更多
-            </button>
+            <a href="/pages/news.html" class="align-self-lg-end align-self-center">
+              <button
+                type="button"
+                class="btn more-btn btn-pd-16-32 fs-6 border-radius-4"
+              >
+                瀏覽更多
+              </button>
+
+            </a>
           </div>
 
           <!-- 左：預覽圖 -->
@@ -1258,7 +1506,7 @@
       </div>
     </section>
 
-    <footer class="mt-10 text-center">
+    <footer class="mt-16 mt-lg-10 text-center">
   <div class="container border-bottom border-primary-40 d-lg-flex justify-content-lg-between align-items-lg-center">
     <div class="mb-10 d-lg-flex flex-lg-row justify-content-lg-center align-items-lg-center">
       <img src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" class="mb-4 mb-lg-0 me-lg-6" />
@@ -1273,8 +1521,8 @@
     </div>
     <div class="d-lg-flex align-items-lg-center">
       <div class="mb-10">
-        <a href="#" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
-        <a href="#" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
+        <a href="../pages/return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
+        <a href="../pages/privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
       </div>
       <div class="d-flex justify-content-center pb-10">
         <a href="#" class="bg-primary-20 p-3 br-12 me-6"
@@ -1320,6 +1568,22 @@
     <p>B-3 甜甜熊貓 ©2025 All Rights Reserved</p>
   </div>
 </footer>
+    <script>
+      const user = document.getElementById('userHeader');
+      const guest = document.getElementById('guestHeader');
+      let login_state = localStorage.getItem("isLogin") === "true";
+      function updateUI() {
+      let login_state = localStorage.getItem("isLogin") ;
+        if(login_state){
+          guest.style.display = "none";
+          user.style.display = "block";
+        }else{
+          guest.style.display = "block";
+          user.style.display = "none";
+        }
+      }
+      updateUI();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

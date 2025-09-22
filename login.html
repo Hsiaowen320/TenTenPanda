@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS/Js -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- ICON -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <title>甜甜熊貓｜TenTen Donut - 甜點專賣</title>
+    <script type="module" crossorigin src="/TenTenPanda/assets/main-B6od55cK.js"></script>
+    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-DMdOrbCc.css">
+  </head>
+  <body>
+    <div id="userHeader">
+      <!-- 已登入 -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+  <div
+    class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
+  >
+    <!-- LOGO -->
+    <div class="order-0 mx-lg-auto">
+      <a
+        class="navbar-brand"
+        href="../pages/index.html"
+      >
+        <img
+          class="logo"
+          src="/TenTenPanda/assets/logo-BrUQNHuW.jpg"
+          alt="TenTen-Logo"
+        />
+      </a>
+    </div>
+    <!-- 購物車 + 漢堡選單 (行動裝置) -->
+     <div class="d-flex order-1 align-items-center order-lg-0">
+      <a href="#" class="bg-primary-20 p-3 br-12 d-lg-none me-6 position-relative"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-cart"
+        aria-controls="cart"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          /></svg>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+        </a>      
+      <button
+        class="navbar-toggler bg-primary-20 p-0 border-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="material-symbols-outlined text-primary-40 p-4"> menu </span>
+      </button>
+
+      <!-- 導航選單 -->
+      <div class="collapse navbar-collapse position-absolute start-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="#">品牌故事</a>
+          </li>
+          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="news.html">最新消息</a></li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown p-4">
+            <a class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100" href="#" id="productList" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品列表</a>
+            <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
+              <li><a class="dropdown-item p-4 text-neutral-100" href="#">經典口味</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="#">季節限定</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="#">甜甜禮盒</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 會員 + 購物車 (桌機模式) -->
+    <div class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2">
+      <ul class="navbar-nav me-auto mb-lg-0 d-none d-lg-flex">
+        <li class="nav-item dropdown p-4">
+          <a class="nav-link dropdown-toggle no-caret p-0 fs-9 fw-400 text-neutral-100" href="#" id="productList" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="d-inline-flex align-items-center p-4">
+              <p class="text-neutral-100 me-3">Hi, 王小明</p>  
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-person text-primary-40"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                />
+              </svg>                              
+            </div>
+          </a>
+          <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
+            <li><a class="dropdown-item p-4 text-neutral-100" href="#">個人資訊</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的收藏</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的訂單</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="#" id="logoutBtn">登出</a></li>
+          </ul>
+        </li> 
+      </ul>     
+      <a href="#" class="bg-primary-20 p-3 br-12 position-relative"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-cart"
+        aria-controls="cart"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          /></svg>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+      </a>
+    </div>
+  </div>
+  <!-- Modal (行動版選單) -->
+  <div class="modal fade d-lg-none" id="modal-menu" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content p-3 modal-height">
+        <div
+          class="modal-header p-0 border-0 header-height align-items-start bg-primary-tint br-tl-40"
+        >
+          <button
+            type="button"
+            class="btn ms-auto p-0"
+            data-bs-dismiss="modal"
+            aria-label="關閉"
+          >
+            <div class="position-relative">
+              <div
+                class="bg-neutral-white br-bl-32 position-relative position-absolute top-0 end-0"
+              >
+                <span class="material-symbols-outlined text-primary-40 m-7">
+                  close
+                </span>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                  alt="corner"
+                  class="position-absolute start-0"
+                  style="transform: translateX(-100%) rotate(-90deg)"
+                />
+
+                <div>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                    alt="corner"
+                    class="position-absolute"
+                    style="transform: rotate(-90deg)"
+                  />
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <!-- 會員 -->
+        <div class="text-center bg-primary-tint pb-2">
+          <div class="d-inline-flex justify-content-center align-items-center br-16 p-4 user-border bg-neutral-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="currentColor"
+              class="bi bi-person text-primary-40 me-2"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+              /></svg>   
+            <p class="text-neutral-100">Hi, 王小明</p>         
+          </div>
+        </div>        
+        <div class="modal-body bg-primary-tint p-5 pb-20 br-bl-40 br-br-40">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button class="nav-link mb-6 py-3 ps-1 text-neutral-100" type="button">
+                品牌故事
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mb-6 py-3 ps-1 text-neutral-100" href="news.html">
+                最新消息
+              </a>
+            </li>
+            <!-- 下拉選單 -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-6 fw-400"
+                id="productList"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="py-3 ps-1 text-neutral-100">商品列表</span>
+                <span class="material-symbols-outlined icon-down">keyboard_arrow_down</span>
+                <span class="material-symbols-outlined icon-up">keyboard_arrow_up</span>                
+              </a>
+              <ul
+                class="dropdown-menu border-0 bg-primary-tint"
+                aria-labelledby="productList"
+              >
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                    >經典口味</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                    >季節限定</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-6 text-neutral-100" href="#">甜甜禮盒</a>
+                </li>
+              </ul>
+            </li>
+            <!-- 下拉選單 -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-4 fw-400"
+                id="user"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="py-3 ps-1 text-neutral-100">會員中心</span>
+                <span class="material-symbols-outlined icon-down">keyboard_arrow_down</span>
+                <span class="material-symbols-outlined icon-up">keyboard_arrow_up</span>
+              </a>
+
+              <ul
+                class="dropdown-menu border-0 bg-primary-tint"
+                aria-labelledby="user"
+              >
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                    >個人資訊</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                    >我的收藏</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#">我的訂單</a>
+                </li>
+                <li>
+                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="#" id="logoutBtn">登出</a>
+                </li>                
+              </ul>
+            </li>            
+          </ul>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <!-- Modal (購物車清單) -->
+  <div class="modal fade" id="modal-cart" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content px-3 py-4 br-24 p-lg-10">
+        <div class="modal-header border-0 d-flex justify-content-between align-items-center p-0 ps-3 mb-5">
+          <p class="text-neutral-100 fs-6 fs-lg-4">購物車清單</p> 
+          <button
+            type="button"
+            class="btn p-0"
+            data-bs-dismiss="modal"
+            aria-label="關閉"
+          >
+            <div
+              class="bg-neutral-white top-0 end-0"
+            >
+              <span class="material-symbols-outlined text-neutral-60 m-4">
+                close
+              </span>
+            </div>
+          </button>
+        </div>
+        <!-- 行動版 -->
+        <div class="modal-body p-0 d-lg-none">
+          <div class="mb-2 pb-6">
+            <div class="border-bottom border-neutral-60 px-4 py-2">
+                <p class="text-neutral-60">品項</p>
+            </div>
+            <ul class="px-3 py-2 mb-4">
+                <li class="mb-4">
+                  <div class="d-flex justify-content-between py-4">
+                    <p class="text-neutral-100">星辰草莓</p>
+                    <p class="text-neutral-60">$ 95</p>
+                  </div>
+                   <div class="d-flex justify-content-between align-items-center py-4">
+                    <div class="br-8 border border-neutral-40 d-inline-flex justify-content-between align-items-center">
+                      <button class="btn-none">
+                        <span class="material-symbols-outlined text-neutral-100 p-3">remove</span>
+                      </button>
+                      <span class="text-neutral-100 py-3">2</span>
+                      <button class="btn-none">
+                        <span class="material-symbols-outlined text-neutral-100 p-3">add</span>
+                      </button>
+                    </div>
+                    <p class="text-neutral-100 fw-bold">NT$ <span>190</span></p>
+                  </div>                 
+                </li>
+                <li>
+                  <div class="d-flex justify-content-between py-4">
+                    <p class="text-neutral-100">星辰草莓</p>
+                    <p class="text-neutral-60">$ 65</p>
+                  </div>
+                   <div class="d-flex justify-content-between align-items-center py-4">
+                    <div class="br-8 border border-neutral-40 d-inline-flex justify-content-between align-items-center">
+                      <button class="btn-none">
+                        <span class="material-symbols-outlined text-neutral-100 p-3">remove</span>
+                      </button>
+                      <span class="text-neutral-100 py-3">1</span>
+                      <button class="btn-none">
+                        <span class="material-symbols-outlined text-neutral-100 p-3">add</span>
+                      </button>
+                    </div>
+                    <p class="text-neutral-100 fw-bold">NT$ <span>65</span></p>
+                  </div>                 
+                </li>                
+            </ul>            
+          </div> 
+          <div class="d-flex justify-content-between border-top border-neutral-60">
+            <p class="text-neutral-100 px-3 py-6">合計金額</p>
+            <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
+          </div> 
+          <div class="modal-footer border-0 p-0 py-4">
+            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
+          </div>
+        </div>
+        <!-- 桌面版 -->
+        <div class="modal-body p-0 d-none d-lg-flex flex-column">
+          <div class="mb-3">
+            <div class="border-bottom border-neutral-60 mb-5 text-start">
+              <div class="fs-T-S text-neutral-60 d-flex align-items-center px-3 py-2">
+                <span class="flex-fill">名稱</span>
+                <span class="flex-fill">單價</span>
+                <span class="flex-fill">數量</span>
+                <span class="flex-fill">小計</span>
+                <span class="flex-fill text-center">刪除</span>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="fs-T-S text-neutral-60 d-flex align-items-center px-3 py-2 text-start">
+                <span class="flex-fill text-neutral-100 fs-T-M">星辰草莓</span>
+                <span class="flex-fill text-neutral-100 fs-T-M">$95</span>
+                <span class="flex-fill">
+                  <div class="br-8 border border-neutral-40 d-inline-flex justify-content-between align-items-center">
+                    <button class="btn-none">
+                      <span class="material-symbols-outlined text-neutral-100 p-3">remove</span>
+                    </button>
+                    <span class="text-neutral-100 py-3 fs-T-M">2</span>
+                    <button class="btn-none">
+                      <span class="material-symbols-outlined text-neutral-100 p-3">add</span>
+                    </button>
+                  </div>
+                </span>
+                <span class="flex-fill text-neutral-100 fw-bold fs-6">NT$ 190</span>
+                <span class="flex-fill d-flex justify-content-center">
+                  <button class="btn-none p-4">
+                    <span class="material-symbols-outlined text-neutral-60">delete</span>
+                  </button>
+                </span>               
+              </div>
+            </div>         
+            <div class="mb-3">
+              <div class="fs-T-S text-neutral-60 d-flex align-items-center px-3 py-2 text-start">
+                <span class="flex-fill text-neutral-100 fs-T-M">經典甜甜</span>
+                <span class="flex-fill text-neutral-100 fs-T-M">$65</span>
+                <span class="flex-fill">
+                  <div class="br-8 border border-neutral-40 d-inline-flex justify-content-between align-items-center">
+                    <button class="btn-none">
+                      <span class="material-symbols-outlined text-neutral-100 p-3">remove</span>
+                    </button>
+                    <span class="text-neutral-100 py-3 fs-T-M">1</span>
+                    <button class="btn-none">
+                      <span class="material-symbols-outlined text-neutral-100 p-3">add</span>
+                    </button>
+                  </div>
+                </span>
+                <span class="flex-fill text-neutral-100 fw-bold fs-6">NT$ 65</span>
+                <span class="flex-fill d-flex justify-content-center">
+                  <button class="btn-none p-4">
+                    <span class="material-symbols-outlined text-neutral-60">delete</span>
+                  </button>
+                </span>               
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between border-top border-neutral-60 mb-5">
+            <p class="text-neutral-100 px-3 py-6">合計金額</p>
+            <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
+          </div>   
+          <div class="modal-footer border-0 p-0">
+            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
+          </div>
+        </div>
+      </div>
+  </div>  
+</nav>    </div>
+    <div id="guestHeader">
+      <!-- 未登入時顯示 -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+  <div
+    class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
+  >
+    <!-- LOGO -->
+    <div class="order-0 mx-lg-auto">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" />
+      </a>
+    </div>
+    <!-- 購物車 + 漢堡選單 (行動裝置) -->
+    <div class="d-flex order-1 align-items-center order-lg-0">
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 d-lg-none me-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+      <button
+        class="navbar-toggler headerBtn bg-primary-20 p-0 border-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="material-symbols-outlined text-primary-40 p-4">
+          menu
+        </span>
+      </button>
+
+      <!-- 導航選單 -->
+      <div class="collapse navbar-collapse position-absolute start-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="../pages/story.html"
+              >品牌故事</a
+            >
+          </li>
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="news.html">最新消息</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown p-4">
+            <a
+              class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100"
+              href="#"
+              id="productList"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >商品列表</a
+            >
+            <ul
+              class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6"
+              aria-labelledby="productList"
+            >
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >經典口味</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >季節限定</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                  >甜甜禮盒</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 會員 + 購物車 (桌機模式) -->
+    <div
+      class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
+    >
+      <a
+        href="../pages/login.html"
+        class="headerBtn bg-primary-20 p-3 br-12 me-8"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+          />
+        </svg>
+      </a>
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- Modal (行動版選單) -->
+  <div
+    class="modal fade d-lg-none"
+    id="modal-menu"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content p-3 modal-height">
+        <div
+          class="modal-header p-0 border-0 header-height align-items-start bg-primary-tint br-tl-40"
+        >
+          <button
+            type="button"
+            class="btn ms-auto p-0"
+            data-bs-dismiss="modal"
+            aria-label="關閉"
+          >
+            <div class="position-relative">
+              <div
+                class="bg-neutral-white br-bl-32 position-relative position-absolute top-0 end-0"
+              >
+                <span class="material-symbols-outlined text-primary-40 m-7">
+                  close
+                </span>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                  alt="corner"
+                  class="position-absolute start-0"
+                  style="transform: translateX(-100%) rotate(-90deg)"
+                />
+
+                <div>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                    alt="corner"
+                    class="position-absolute"
+                    style="transform: rotate(-90deg)"
+                  />
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <button
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+                type="button"
+              >
+                品牌故事
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+                type="button"
+              >
+                最新消息
+              </button>
+            </li>
+            <!-- 下拉選單 -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-4 fw-400"
+                id="productList"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="py-3 ps-1 text-neutral-100">商品列表</span>
+                <span class="material-symbols-outlined" id="dropdownIcon"
+                  >keyboard_arrow_down</span
+                >
+              </a>
+
+              <ul
+                class="dropdown-menu border-0 bg-primary-tint"
+                aria-labelledby="productList"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="#"
+                    >經典口味</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="#"
+                    >季節限定</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 text-neutral-100"
+                    href="#"
+                    >甜甜禮盒</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
+        >
+          <button
+            type="button"
+            class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4"
+          >
+            登入／註冊
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </div>
+
+    <main class="login-bg border-top border-bottom border-lg-0">
+      <div class="login container py-lg-14 py-8 px-3 px-lg-0">
+        <div class="row d-lg-flex">
+          <!-- 照片區 -->
+          <aside class="col-lg-4 pe-5 d-none d-lg-block">
+            <div class="swiper mySwiper br-24">
+              <div class="swiper-wrapper">
+                <!-- 照片 1 -->
+                <div class="swiper-slide login-card border-0">
+                  <img
+                    src="/TenTenPanda/assets/login-4-BR-SpZoS.png"
+                    alt=""
+                    class="login-img h-100 w-100 object-fit-cover"
+                  />
+                </div>
+                <!-- 照片 2 -->
+                <div class="swiper-slide login-card border-0">
+                  <img
+                    src="/TenTenPanda/assets/login-2-JnBY4grI.jpg"
+                    alt=""
+                    class="login-img h-100 w-100 object-fit-cover"
+                  />
+                </div>
+                <!-- 照片 3 -->
+                <div class="swiper-slide login-card border-0">
+                  <img
+                    src="/TenTenPanda/assets/login-3-DaHz7WOV.png"
+                    alt=""
+                    class="login-img h-100 w-100 object-fit-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </aside>
+          <!-- 會員登入資訊 -->
+          <form class="col-lg-8 ps-lg-5 px-3" id="loginForm">
+            <!-- 內容：白底背景 -->
+            <div
+              class="card br-lg-24 border-0 d-flex flex-column justify-content-center align-items-center px-lg-8 py-lg-18 h-100 w-100"
+            >
+              <h4 class="fs-2 fw-bold mb-lg-10 text-neutral-100 mb-6">
+                歡迎回來！
+              </h4>
+              <!-- 電子信箱 -->
+              <div class="w-100 mb-8 mb-lg-6">
+                <p class="fs-lg-9 fs-7 text-neutral-100 ps-2 mb-2">
+                  電子信箱<span class="text-primary-40">*</span>
+                </p>
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control br-8 input-bg px-5"
+                    id="emailInput"
+                    placeholder="name@example.com"
+                    required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?$"
+                  />
+                  <label for="emailInput" class="px-5"
+                    >例如：example@email.com</label
+                  >
+                </div>
+              </div>
+              <!-- 密碼 -->
+              <div class="w-100 mb-8 mb-lg-6">
+                <p class="fs-lg-9 fs-7 text-neutral-100 ps-2 mb-2">
+                  密碼<span class="text-primary-40">*</span>
+                </p>
+                <div class="form-floating">
+                  <input
+                    type="password"
+                    class="form-control br-8 input-bg px-5 mb-2"
+                    id="passwordInput"
+                    placeholder="Password"
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$"
+                    required
+                  />
+                  <label for="passwordInput" class="px-5"
+                    >例如：Aa12345678</label
+                  >
+                </div>
+                <!-- 記住帳號＋忘記密碼 -->
+                <div class="d-flex align-items-center justify-content-between">
+                  <div class="form-check m-0">
+                    <input
+                      class="form-check-input border-primary-40 p-2"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label
+                      class="fs-lg-9 fs-7 form-check-label align-text-bottom text-primary-40"
+                      for="flexCheckChecked"
+                    >
+                      記住帳號
+                    </label>
+                  </div>
+                  <a href="/TenTenPanda/pages/password.html" class="fs-lg-9 fs-7 link">
+                    忘記密碼？
+                  </a>
+                </div>
+              </div>
+              <!-- 會員登入按鈕＋註冊連結 -->
+              <div class="w-100 mb-8 mb-lg-6">
+                <!-- 會員登入 -->
+                <div class="mb-2">
+                  <!-- 登入按鈕 -->
+                  <button
+                    type="button"
+                    class="btn login-btn fs-6 br-8 w-100 py-4"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    id="loginBtn"
+                  >
+                    立即登入
+                  </button>
+                  <!-- 登入畫面 -->
+                  <div
+                    class="modal fade"
+                    id="loginModal"
+                    tabindex="-1"
+                    aria-labelledby="loginModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered mx-auto">
+                      <div
+                        class="modal-content br-32 p-10 d-flex border-0 justify-content-center align-items-center shadow"
+                      >
+                        <div class="modal-body p-0 text-center">
+                          <!-- 登入成功圖標 -->
+                          <span
+                            class="badge rounded-circle bg-primary-20 p-lg-6 p-4 mb-5"
+                          >
+                            <span
+                              class="material-symbols-outlined check-icon fw-bold text-primary-40 d-flex justify-content-center align-items-center"
+                            >
+                              check
+                            </span>
+                          </span>
+                          <p class="text-neutral-100 fw-bold fs-lg-5 fs-6">
+                            登入成功！
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- 註冊連結 -->
+                <p class="text-neutral-100">
+                  還不是會員嗎？
+                  <a href="/TenTenPanda/pages/join.html" class="link">立即註冊</a>
+                </p>
+              </div>
+            
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-16 mt-lg-10 text-center">
+  <div class="container border-bottom border-primary-40 d-lg-flex justify-content-lg-between align-items-lg-center">
+    <div class="mb-10 d-lg-flex flex-lg-row justify-content-lg-center align-items-lg-center">
+      <img src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" class="mb-4 mb-lg-0 me-lg-6" />
+      <div class="my-lg-7">
+        <p class="d-flex align-items-center justify-content-center mb-4 fs-T-M justify-content-lg-start mb-lg-2">
+          <span class="material-symbols-outlined me-2"> mail </span>tenten@gmail.com
+        </p>
+        <p class="d-flex align-items-center justify-content-center fs-T-M justify-content-lg-start">
+          <span class="material-symbols-outlined me-2"> call </span>0912-345-678
+        </p>
+      </div>
+    </div>
+    <div class="d-lg-flex align-items-lg-center">
+      <div class="mb-10">
+        <a href="../pages/return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
+        <a href="../pages/privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
+      </div>
+      <div class="d-flex justify-content-center pb-10">
+        <a href="#" class="bg-primary-20 p-3 br-12 me-6"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-instagram text-primary-40"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+            /></svg></a>
+        <a href="#" class="bg-primary-20 p-3 br-12 me-6"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-facebook text-primary-40"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+            /></svg></a>
+        <a href="#" class="bg-primary-20 p-3 br-12"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-line text-primary-40"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0c4.411 0 8 2.912 8 6.492 0 1.433-.555 2.723-1.715 3.994-1.678 1.932-5.431 4.285-6.285 4.645-.83.35-.734-.197-.696-.413l.003-.018.114-.685c.027-.204.055-.521-.026-.723-.09-.223-.444-.339-.704-.395C2.846 12.39 0 9.701 0 6.492 0 2.912 3.59 0 8 0M5.022 7.686H3.497V4.918a.156.156 0 0 0-.155-.156H2.78a.156.156 0 0 0-.156.156v3.486c0 .041.017.08.044.107v.001l.002.002.002.002a.15.15 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157m.791-2.924a.156.156 0 0 0-.156.156v3.486c0 .086.07.155.156.155h.562c.086 0 .155-.07.155-.155V4.918a.156.156 0 0 0-.155-.156zm3.863 0a.156.156 0 0 0-.156.156v2.07L7.923 4.832l-.013-.015v-.001l-.01-.01-.003-.003-.011-.009h-.001L7.88 4.79l-.003-.002-.005-.003-.008-.005h-.002l-.003-.002-.01-.004-.004-.002-.01-.003h-.002l-.003-.001-.009-.002h-.006l-.003-.001h-.004l-.002-.001h-.574a.156.156 0 0 0-.156.155v3.486c0 .086.07.155.156.155h.56c.087 0 .157-.07.157-.155v-2.07l1.6 2.16a.2.2 0 0 0 .039.038l.001.001.01.006.004.002.008.004.007.003.005.002.01.003h.003a.2.2 0 0 0 .04.006h.56c.087 0 .157-.07.157-.155V4.918a.156.156 0 0 0-.156-.156zm3.815.717v-.56a.156.156 0 0 0-.155-.157h-2.242a.16.16 0 0 0-.108.044h-.001l-.001.002-.002.003a.16.16 0 0 0-.044.107v3.486c0 .041.017.08.044.107l.002.003.002.002a.16.16 0 0 0 .108.043h2.242c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156v-.56a.156.156 0 0 0-.155-.157H11.81v-.589h1.525c.086 0 .155-.07.155-.156Z"
+            /></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="pt-4 pb-5 pt-lg-6 pb-lg-8 fs-T-S">
+    <p>B-3 甜甜熊貓 ©2025 All Rights Reserved</p>
+  </div>
+</footer>
+    <script>
+      const user = document.getElementById("userHeader");
+      const guest = document.getElementById("guestHeader");
+      let login_state = localStorage.getItem("isLogin") === "true";
+      function updateUI() {
+        let login_state = localStorage.getItem("isLogin");
+        if (login_state) {
+          guest.style.display = "none";
+          user.style.display = "block";
+        } else {
+          guest.style.display = "block";
+          user.style.display = "none";
+        }
+      }
+      updateUI();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          initialSlide: 0, // 強制從第一張開始
+          slidesPerView: 1,   // ⭐ 每次只顯示一張
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+          on: {
+            afterInit: function () {
+              this.slideToLoop(0, 0); // 初始化後跳到真正的第一張
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
