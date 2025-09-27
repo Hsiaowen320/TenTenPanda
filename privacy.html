@@ -15,10 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
 
     <link
       rel="stylesheet"
@@ -32,12 +28,11 @@
     />
 
     <title>甜甜熊貓｜TenTen Donut - 甜點專賣</title>
-    <script type="module" crossorigin src="/TenTenPanda/assets/main-CCWM9LHh.js"></script>
-    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-j3EjH_4Y.css">
+    <script type="module" crossorigin src="/TenTenPanda/assets/main-BtBtHIJh.js"></script>
+    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-CCS4NgJe.css">
   </head>
   <body>
-    <div id="userHeader">
-      <!-- 已登入 -->
+    <div id="userHeader" style="visibility: hidden">
       <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
   <div
     class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
@@ -46,7 +41,7 @@
     <div class="order-0 mx-lg-auto">
       <a
         class="navbar-brand"
-        href="../pages/index.html"
+        href="index.html"
       >
         <img
           class="logo"
@@ -80,7 +75,7 @@
         class="navbar-toggler bg-primary-20 p-0 border-0"
         type="button"
         data-bs-toggle="modal"
-        data-bs-target="#modal-menu"
+        data-bs-target="#modal-menu-profile"
         aria-controls="menu"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -91,16 +86,16 @@
       <!-- 導航選單 -->
       <div class="collapse navbar-collapse position-absolute start-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
-          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="#">品牌故事</a>
+          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="story.html">品牌故事</a>
           </li>
           <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="news.html">最新消息</a></li>
           <!-- Dropdown -->
           <li class="nav-item dropdown p-4">
             <a class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100" href="#" id="productList" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品列表</a>
             <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">經典口味</a></li>
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">季節限定</a></li>
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">甜甜禮盒</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-classic.html">經典口味</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-seasonal.html">季節限定</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-giftbox.html">甜甜禮盒</a></li>
             </ul>
           </li>
         </ul>
@@ -128,10 +123,10 @@
             </div>
           </a>
           <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">個人資訊</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的收藏</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的訂單</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#" id="logoutBtn">登出</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myInfo.html">個人資訊</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myFavorite.html">我的收藏</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myOrders.html">我的訂單</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="index.html" id="logoutBtn">登出</a></li>
           </ul>
         </li> 
       </ul>     
@@ -157,7 +152,7 @@
     </div>
   </div>
   <!-- Modal (行動版選單) -->
-  <div class="modal fade d-lg-none" id="modal-menu" tabindex="-1" aria-hidden="true">
+  <div class="modal fade d-lg-none" id="modal-menu-profile" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen-sm-down">
       <div class="modal-content p-3 modal-height">
         <div
@@ -215,9 +210,9 @@
         <div class="modal-body bg-primary-tint p-5 pb-20 br-bl-40 br-br-40">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button class="nav-link mb-6 py-3 ps-1 text-neutral-100" type="button">
+              <a href="story.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
                 品牌故事
-              </button>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link mb-6 py-3 ps-1 text-neutral-100" href="news.html">
@@ -243,17 +238,17 @@
                 aria-labelledby="productList"
               >
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="productList-classic.html"
                     >經典口味</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="productList-seasonal.html"
                     >季節限定</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-6 text-neutral-100" href="#">甜甜禮盒</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-6 text-neutral-100" href="productList-giftbox.html">甜甜禮盒</a>
                 </li>
               </ul>
             </li>
@@ -277,20 +272,20 @@
                 aria-labelledby="user"
               >
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myInfo.html"
                     >個人資訊</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myFavorite.html"
                     >我的收藏</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#">我的訂單</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myOrders.html">我的訂單</a>
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="#" id="logoutBtn">登出</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="index.html" id="logoutBtnMb">登出</a>
                 </li>                
               </ul>
             </li>            
@@ -443,8 +438,7 @@
       </div>
   </div>  
 </nav>    </div>
-    <div id="guestHeader">
-      <!-- 未登入時顯示 -->
+    <div id="guestHeader" style="visibility: hidden">
       <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
   <div
     class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
@@ -489,7 +483,7 @@
       <div class="collapse navbar-collapse position-absolute start-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
           <li class="nav-item p-4 me-8 fs-6">
-            <a class="nav-link text-neutral-100" href="../pages/story.html"
+            <a class="nav-link text-neutral-100" href="story.html"
               >品牌故事</a
             >
           </li>
@@ -512,17 +506,17 @@
               aria-labelledby="productList"
             >
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-classic.html"
                   >經典口味</a
                 >
               </li>
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-seasonal.html"
                   >季節限定</a
                 >
               </li>
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="#"
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-giftbox.html"
                   >甜甜禮盒</a
                 >
               </li>
@@ -536,7 +530,7 @@
       class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
     >
       <a
-        href="../pages/login.html"
+        href="login.html"
         class="headerBtn bg-primary-20 p-3 br-12 me-8"
       >
         <svg
@@ -615,20 +609,14 @@
         <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button
-                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
-                type="button"
-              >
+              <a href="story.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
                 品牌故事
-              </button>
+              </a>
             </li>
             <li class="nav-item">
-              <button
-                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
-                type="button"
-              >
+              <a href="news.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
                 最新消息
-              </button>
+              </a>
             </li>
             <!-- 下拉選單 -->
             <li class="nav-item dropdown">
@@ -653,21 +641,21 @@
                 <li>
                   <a
                     class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
-                    href="#"
+                    href="productList-classic.html"
                     >經典口味</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
-                    href="#"
+                    href="productList-seasonal.html"
                     >季節限定</a
                   >
                 </li>
                 <li>
                   <a
                     class="dropdown-item mx-4 py-3 ps-1 text-neutral-100"
-                    href="#"
+                    href="productList-giftbox.html"
                     >甜甜禮盒</a
                   >
                 </li>
@@ -678,12 +666,9 @@
         <div
           class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
         >
-          <button
-            type="button"
-            class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4"
-          >
+          <a href="login.html" type="button" class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4">
             登入／註冊
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -691,19 +676,32 @@
 </nav>
     </div>
 
-    <main class="login-bg border-top border-bottom border-lg-0 position-relative">
+    <main
+      class="login-bg border-top border-bottom border-lg-0 position-relative"
+    >
       <div class="login container py-lg-14 py-8 px-3 px-lg-0">
         <div class="row d-lg-flex justify-content-center">
           <!-- 麵包屑 -->
           <div class="container mb-4 mb-lg-8">
             <nav>
               <ol class="breadcrumb">
-                <li class="bread-item"><a href="../pages/index.html"><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='feather%20feather-home'%3e%3cpath%20d='M3%209l9-7%209%207v11a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2z'%3e%3c/path%3e%3cpolyline%20points='9%2022%209%2012%2015%2012%2015%2022'%3e%3c/polyline%3e%3c/svg%3e" alt=""></a></li>
+                <li class="bread-item">
+                  <a href="index.html"
+                    ><img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='feather%20feather-home'%3e%3cpath%20d='M3%209l9-7%209%207v11a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2z'%3e%3c/path%3e%3cpolyline%20points='9%2022%209%2012%2015%2012%2015%2022'%3e%3c/polyline%3e%3c/svg%3e" alt=""
+                  /></a>
+                </li>
                 <li class="d-flex align-items-center">
-                  <span class="material-symbols-outlined text-neutral-60 mx-2">keyboard_double_arrow_right</span>
+                  <span class="material-symbols-outlined text-neutral-60 mx-2"
+                    >keyboard_double_arrow_right</span
+                  >
                   <a href="#"></a>
                 </li>
-                <li class="bread-item text-neutral-80 fw-bold active" aria-current="page">隱私權政策</li>
+                <li
+                  class="bread-item text-neutral-80 fw-bold active"
+                  aria-current="page"
+                >
+                  隱私權政策
+                </li>
               </ol>
             </nav>
           </div>
@@ -711,7 +709,7 @@
           <div class="w-100 mb-8 mb-lg-6">
             <!-- 歡迎詞 -->
             <h4 class="fs-2 fw-bold mb-lg-10 text-neutral-100 mb-6 text-center">
-                隱私權政策
+              隱私權政策
             </h4>
             <!-- 第一項 -->
             <div class="mb-lg-10 mb-8">
@@ -737,7 +735,9 @@
                   本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。
                 </li>
                 <li class="fs-lg-9 fs-7 text-neutral-100 lh-base mb-2">
-                  於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的 IP 位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。
+                  於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的
+                  IP
+                  位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。
                 </li>
                 <li class="fs-lg-9 fs-7 text-neutral-100 lh-base mb-2">
                   為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。
@@ -746,7 +746,6 @@
                   您可以隨時向我們提出請求，以更正或刪除本網站所蒐集您錯誤或不完整的個人資料。
                 </li>
               </ul>
-              
             </div>
             <!-- 第三項 -->
             <div class="mb-lg-10 mb-8">
@@ -761,7 +760,6 @@
                   如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。
                 </li>
               </ul>
-              
             </div>
             <!-- 第四項 -->
             <div class="mb-lg-10 mb-8">
@@ -784,7 +782,9 @@
                   本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。
                 </li>
               </ul>
-              <p class="fs-lg-9 fs-7 text-neutral-100 lh-base fw-bold mb-2 ps-5">
+              <p
+                class="fs-lg-9 fs-7 text-neutral-100 lh-base fw-bold mb-2 ps-5"
+              >
                 前項但書之情形包括不限於：
               </p>
               <ul class="list-style-circle">
@@ -810,7 +810,6 @@
                   本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。
                 </li>
               </ul>
-              
             </div>
             <!-- 第六項 -->
             <div class="mb-lg-10 mb-8">
@@ -819,7 +818,10 @@
               </h5>
               <ul class="list-style">
                 <li class="fs-lg-9 fs-7 text-neutral-100 lh-base">
-                  為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie 的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。
+                  為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的
+                  Cookie，若您不願接受 Cookie
+                  的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕
+                  Cookie 的寫入，但可能會導致網站某些功能無法正常執行。
                 </li>
               </ul>
             </div>
@@ -854,8 +856,8 @@
     </div>
     <div class="d-lg-flex align-items-lg-center">
       <div class="mb-10">
-        <a href="../pages/return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
-        <a href="../pages/privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
+        <a href="return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
+        <a href="privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
       </div>
       <div class="d-flex justify-content-center pb-10">
         <a href="#" class="bg-primary-20 p-3 br-12 me-6"
@@ -901,48 +903,7 @@
     <p>B-3 甜甜熊貓 ©2025 All Rights Reserved</p>
   </div>
 </footer>
-    <script>
-      const user = document.getElementById("userHeader");
-      const guest = document.getElementById("guestHeader");
-      let login_state = localStorage.getItem("isLogin") === "true";
-      function updateUI() {
-        let login_state = localStorage.getItem("isLogin");
-        if (login_state) {
-          guest.style.display = "none";
-          user.style.display = "block";
-        } else {
-          guest.style.display = "block";
-          user.style.display = "none";
-        }
-      }
-      updateUI();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const emailInput = document.getElementById("emailFindInput");
-        const letterBtn = document.getElementById("letterBtn");
-      
-        // 即時檢查 email 格式
-        emailInput.addEventListener("input", () => {
-          if (emailInput.checkValidity()) {
-            letterBtn.disabled = false;
-          } else {
-            letterBtn.disabled = true;
-          }
-        });
-      
-        // Modal 出現後 → 延遲 1.5 秒跳轉
-        const letterModal = document.getElementById("letterModal");
-        letterModal.addEventListener("shown.bs.modal", () => {
-          setTimeout(() => {
-            window.location.href = "login.html";
-          }, 1500);
-        });
-      });
-    </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

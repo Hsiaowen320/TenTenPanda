@@ -24,15 +24,18 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <title>甜甜熊貓｜TenTen Donut - 訂單成立</title>
-    <script type="module" crossorigin src="/TenTenPanda/assets/main-CCWM9LHh.js"></script>
-    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-j3EjH_4Y.css">
+    <script type="module" crossorigin src="/TenTenPanda/assets/main-BtBtHIJh.js"></script>
+    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-CCS4NgJe.css">
   </head>
-    <!-- 這裡先用 true (登入成功) /  false (未登入) 切換版型 -->
-    
-    <!-- 登入成功時顯示 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+
+  <body>
+    <div id="userHeader" style="visibility: hidden">
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
   <div
     class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
   >
@@ -40,7 +43,7 @@
     <div class="order-0 mx-lg-auto">
       <a
         class="navbar-brand"
-        href="../pages/index.html"
+        href="index.html"
       >
         <img
           class="logo"
@@ -74,7 +77,7 @@
         class="navbar-toggler bg-primary-20 p-0 border-0"
         type="button"
         data-bs-toggle="modal"
-        data-bs-target="#modal-menu"
+        data-bs-target="#modal-menu-profile"
         aria-controls="menu"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -85,16 +88,16 @@
       <!-- 導航選單 -->
       <div class="collapse navbar-collapse position-absolute start-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
-          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="#">品牌故事</a>
+          <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="story.html">品牌故事</a>
           </li>
           <li class="nav-item p-4 me-8 fs-6"><a class="nav-link text-neutral-100" href="news.html">最新消息</a></li>
           <!-- Dropdown -->
           <li class="nav-item dropdown p-4">
             <a class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100" href="#" id="productList" role="button" data-bs-toggle="dropdown" aria-expanded="false">商品列表</a>
             <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">經典口味</a></li>
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">季節限定</a></li>
-              <li><a class="dropdown-item p-4 text-neutral-100" href="#">甜甜禮盒</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-classic.html">經典口味</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-seasonal.html">季節限定</a></li>
+              <li><a class="dropdown-item p-4 text-neutral-100" href="productList-giftbox.html">甜甜禮盒</a></li>
             </ul>
           </li>
         </ul>
@@ -122,10 +125,10 @@
             </div>
           </a>
           <ul class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6" aria-labelledby="productList">
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">個人資訊</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的收藏</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#">我的訂單</a></li>
-            <li><a class="dropdown-item p-4 text-neutral-100" href="#" id="logoutBtn">登出</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myInfo.html">個人資訊</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myFavorite.html">我的收藏</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="myOrders.html">我的訂單</a></li>
+            <li><a class="dropdown-item p-4 text-neutral-100" href="index.html" id="logoutBtn">登出</a></li>
           </ul>
         </li> 
       </ul>     
@@ -151,7 +154,7 @@
     </div>
   </div>
   <!-- Modal (行動版選單) -->
-  <div class="modal fade d-lg-none" id="modal-menu" tabindex="-1" aria-hidden="true">
+  <div class="modal fade d-lg-none" id="modal-menu-profile" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen-sm-down">
       <div class="modal-content p-3 modal-height">
         <div
@@ -209,9 +212,9 @@
         <div class="modal-body bg-primary-tint p-5 pb-20 br-bl-40 br-br-40">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <button class="nav-link mb-6 py-3 ps-1 text-neutral-100" type="button">
+              <a href="story.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
                 品牌故事
-              </button>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link mb-6 py-3 ps-1 text-neutral-100" href="news.html">
@@ -237,17 +240,17 @@
                 aria-labelledby="productList"
               >
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="productList-classic.html"
                     >經典口味</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="productList-seasonal.html"
                     >季節限定</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-6 text-neutral-100" href="#">甜甜禮盒</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-6 text-neutral-100" href="productList-giftbox.html">甜甜禮盒</a>
                 </li>
               </ul>
             </li>
@@ -271,20 +274,20 @@
                 aria-labelledby="user"
               >
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myInfo.html"
                     >個人資訊</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#"
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myFavorite.html"
                     >我的收藏</a
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="#">我的訂單</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100" href="myOrders.html">我的訂單</a>
                 </li>
                 <li>
-                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="#" id="logoutBtn">登出</a>
+                  <a class="dropdown-item mx-4 py-3 ps-1 text-neutral-100" href="index.html" id="logoutBtnMb">登出</a>
                 </li>                
               </ul>
             </li>            
@@ -436,51 +439,327 @@
         </div>
       </div>
   </div>  
-</nav> 
+</nav>    </div>
+    <div id="guestHeader" style="visibility: hidden">
+      <nav class="navbar navbar-expand-lg navbar-light bg-neutral-white">
+  <div
+    class="container d-flex justify-content-between align-items-center px-3 py-4 position-relative"
+  >
+    <!-- LOGO -->
+    <div class="order-0 mx-lg-auto">
+      <a class="navbar-brand" href="index.html">
+        <img class="logo" src="/TenTenPanda/assets/logo-BrUQNHuW.jpg" alt="TenTen-Logo" />
+      </a>
+    </div>
+    <!-- 購物車 + 漢堡選單 (行動裝置) -->
+    <div class="d-flex order-1 align-items-center order-lg-0">
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 d-lg-none me-6">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+      <button
+        class="navbar-toggler headerBtn bg-primary-20 p-0 border-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-bs-target="#modal-menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="material-symbols-outlined text-primary-40 p-4">
+          menu
+        </span>
+      </button>
+
+      <!-- 導航選單 -->
+      <div class="collapse navbar-collapse position-absolute start-0" id="menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="story.html"
+              >品牌故事</a
+            >
+          </li>
+          <li class="nav-item p-4 me-8 fs-6">
+            <a class="nav-link text-neutral-100" href="news.html">最新消息</a>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown p-4">
+            <a
+              class="nav-link dropdown-toggle no-caret fs-6 fw-700 text-neutral-100"
+              href="#"
+              id="productList"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >商品列表</a
+            >
+            <ul
+              class="dropdown-menu border-0 br-bl-16 br-br-16 text-center fs-6"
+              aria-labelledby="productList"
+            >
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-classic.html"
+                  >經典口味</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-seasonal.html"
+                  >季節限定</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item p-4 text-neutral-100" href="productList-giftbox.html"
+                  >甜甜禮盒</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 會員 + 購物車 (桌機模式) -->
+    <div
+      class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
+    >
+      <a
+        href="login.html"
+        class="headerBtn bg-primary-20 p-3 br-12 me-8"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-person text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+          />
+        </svg>
+      </a>
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-cart2 text-primary-40"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- Modal (行動版選單) -->
+  <div
+    class="modal fade d-lg-none"
+    id="modal-menu"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen-sm-down">
+      <div class="modal-content p-3 modal-height">
+        <div
+          class="modal-header p-0 border-0 header-height align-items-start bg-primary-tint br-tl-40"
+        >
+          <button
+            type="button"
+            class="btn ms-auto p-0"
+            data-bs-dismiss="modal"
+            aria-label="關閉"
+          >
+            <div class="position-relative">
+              <div
+                class="bg-neutral-white br-bl-32 position-relative position-absolute top-0 end-0"
+              >
+                <span class="material-symbols-outlined text-primary-40 m-7">
+                  close
+                </span>
+                <img
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                  alt="corner"
+                  class="position-absolute start-0"
+                  style="transform: translateX(-100%) rotate(-90deg)"
+                />
+
+                <div>
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVHgB7ZjbDcIwDEUvTMAI2QA2oBvABrABIzACI3S0jtARLo6SSiji0VfSK9Qjuf5rjmI7VQOs/DEkd1to49QF1x2cirzgEcrYFLdQxeScBZVLXPmHsuAJyvj+8yWGIuZ1ZUS1xLrl7aa3A2qYUy0rGHeveRVU68GLhYMiae/JlTjtPSlB8zjzA1ga/9+RDoaaYM0vYEls/Rt/gKWwtQ/sAZaAbw5kGcEhcsUFh8oVFRwjV0yQYSAajgC5YThKWo4EuWD4Qjw4EeTA3ltxZEmzCjIMQs0ZwRwwlPPOCb2WRTCnWMcGA/FSCNcSt5iz0kvQpJylM8J1WGWxQyE2iYTHxdjHXJUUSnkCZdEQqYGyvm8AAAAASUVORK5CYII="
+                    alt="corner"
+                    class="position-absolute"
+                    style="transform: rotate(-90deg)"
+                  />
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="story.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
+                品牌故事
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="news.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
+                最新消息
+              </a>
+            </li>
+            <!-- 下拉選單 -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link d-flex justify-content-between align-items-center no-caret dropdown-toggle p-0 mb-4 fw-400"
+                id="productList"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="py-3 ps-1 text-neutral-100">商品列表</span>
+                <span class="material-symbols-outlined" id="dropdownIcon"
+                  >keyboard_arrow_down</span
+                >
+              </a>
+
+              <ul
+                class="dropdown-menu border-0 bg-primary-tint"
+                aria-labelledby="productList"
+              >
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="productList-classic.html"
+                    >經典口味</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 mb-2 text-neutral-100"
+                    href="productList-seasonal.html"
+                    >季節限定</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item mx-4 py-3 ps-1 text-neutral-100"
+                    href="productList-giftbox.html"
+                    >甜甜禮盒</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
+        >
+          <a href="login.html" type="button" class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4">
+            登入／註冊
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    </div>
 
     <main class="order-bg">
       <section class="py-lg-14 py-8 container">
         <!-- 進度條 -->
-        <ol class="d-flex justify-content-between p-lg-8 px-2 position-relative mb-lg-10 mb-8">
+        <ol
+          class="d-flex justify-content-between p-lg-8 px-2 position-relative mb-lg-10 mb-8"
+        >
           <li class="d-flex flex-column align-items-center">
-            <div class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center">
+            <div
+              class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center"
+            >
               <i class="bi bi-check2 text-white fs-lg-5 fs-7"></i>
             </div>
-            <p class="fw-bold fs-lg-6 fs-8 text-primary-40">查看購物車</p>      
+            <p class="fw-bold fs-lg-6 fs-8 text-primary-40">查看購物車</p>
           </li>
           <li class="d-flex flex-column align-items-center">
-            <div class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center">
+            <div
+              class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center"
+            >
               <i class="bi bi-check2 text-white fs-lg-5 fs-7"></i>
             </div>
             <p class="fw-bold fs-lg-6 fs-8 text-primary-40">填寫收件資料</p>
           </li>
           <li class="d-flex flex-column align-items-center">
-            <div class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center">
-              <p class="text-white fs-lg-6 fs-8" style="margin-left: 1px;">3</p>
+            <div
+              class="bg-primary-40 mb-lg-3 mb-2 order-progress-dot rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <p class="text-white fs-lg-6 fs-8" style="margin-left: 1px">3</p>
             </div>
             <p class="fw-bold fs-lg-6 fs-8 text-primary-40">確認付款</p>
           </li>
           <!-- 線條 -->
-          <div class="order-progress-leftline bg-primary-40 position-absolute translate-middle-y"></div> 
-          <div class="order-progress-rightline bg-primary-40 position-absolute translate-middle-y"></div> 
-        </ol>           
-        <div class="orer-details-bg rounded-4 overflow-hidden d-flex flex-column flex-lg-row">
+          <div
+            class="order-progress-leftline bg-primary-40 position-absolute translate-middle-y"
+          ></div>
+          <div
+            class="order-progress-rightline bg-primary-40 position-absolute translate-middle-y"
+          ></div>
+        </ol>
+        <div
+          class="orer-details-bg rounded-4 overflow-hidden d-flex flex-column flex-lg-row"
+        >
           <div class="d-none d-lg-block">
-            <img src="/TenTenPanda/assets/order-success-img-gR_xX1pC.png" alt="" class="img-fluid">
+            <img
+              src="/TenTenPanda/assets/order-success-img-gR_xX1pC.png"
+              alt=""
+              class="img-fluid"
+            />
           </div>
-          <div class="d-flex flex-column gap-5 align-items-center justify-content-center flex-grow-1 mt-lg-0 mt-8">
+          <div
+            class="d-flex flex-column gap-5 align-items-center justify-content-center flex-grow-1 mt-lg-0 mt-8"
+          >
             <div>
-              <img src="data:image/png;base64,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" alt="" class="img-fluid">
+              <img
+                src="data:image/png;base64,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"
+                alt=""
+                class="img-fluid"
+              />
             </div>
-            <h2 class="fw-bold fs-3 lh-base" style="letter-spacing: 0.04em;">您的訂單已確認 !</h2>
-            <div class="d-flex flex-column gap-2 align-items-center fs-lg-6 fs-7">
+            <h2 class="fw-bold fs-3 lh-base" style="letter-spacing: 0.04em">
+              您的訂單已確認 !
+            </h2>
+            <div
+              class="d-flex flex-column gap-2 align-items-center fs-lg-6 fs-7"
+            >
               <p>您的訂單編號為：A1234567890</p>
               <p>我們會盡快為您處理，並於出貨時通知您</p>
             </div>
-            <div class="d-flex gap-4 w-100 px-lg-15 my-lg-5 flex-column flex-lg-row px-3 mb-8">
-              <a href="myOrders.html" class="btn btn-outline-primary-80 bg-white w-100 py-3 fs-6" target="_blank">查看訂單資訊</a>
-              <a href="index.html" class="btn btn-primary-40 text-white w-100 py-3 fs-6">繼續逛逛</a>
-            </div>            
+            <div
+              class="d-flex gap-4 w-100 px-lg-15 my-lg-5 flex-column flex-lg-row px-3 mb-8"
+            >
+              <a
+                href="myOrders.html"
+                class="btn btn-outline-primary-80 bg-white w-100 py-3 fs-6"
+                target="_blank"
+                >查看訂單資訊</a
+              >
+              <a
+                href="index.html"
+                class="btn btn-primary-40 text-white w-100 py-3 fs-6"
+                >繼續逛逛</a
+              >
+            </div>
           </div>
         </div>
       </section>
@@ -501,8 +780,8 @@
     </div>
     <div class="d-lg-flex align-items-lg-center">
       <div class="mb-10">
-        <a href="../pages/return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
-        <a href="../pages/privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
+        <a href="return.html" class="fs-T-M me-3 px-lg-5 py-lg-4">退換貨政策</a>
+        <a href="privacy.html" class="fs-T-M px-lg-5 py-lg-4 me-lg-18">隱私權政策</a>
       </div>
       <div class="d-flex justify-content-center pb-10">
         <a href="#" class="bg-primary-20 p-3 br-12 me-6"
@@ -548,6 +827,6 @@
     <p>B-3 甜甜熊貓 ©2025 All Rights Reserved</p>
   </div>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   </body>
 </html>
