@@ -20,9 +20,9 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
     />
     <title>個人資訊｜甜甜熊貓 TenTen Donut</title>
-    <script type="module" crossorigin src="/TenTenPanda/assets/myInfo-Bz8VI-sr.js"></script>
-    <link rel="modulepreload" crossorigin href="/TenTenPanda/assets/main-BtBtHIJh.js">
-    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-CCS4NgJe.css">
+    <script type="module" crossorigin src="/TenTenPanda/assets/myInfo-Cni4kCTD.js"></script>
+    <link rel="modulepreload" crossorigin href="/TenTenPanda/assets/main-BE_LZuRY.js">
+    <link rel="stylesheet" crossorigin href="/TenTenPanda/assets/main-DeXThjVb.css">
   </head>
   <body class="favorites-page">
     <div id="userHeader" style="visibility: hidden">
@@ -45,7 +45,7 @@
     </div>
     <!-- 購物車 + 漢堡選單 (行動裝置) -->
      <div class="d-flex order-1 align-items-center order-lg-0">
-      <a href="#" class="bg-primary-20 p-3 br-12 d-lg-none me-6 position-relative"
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 d-lg-none me-6 position-relative"
         data-bs-toggle="modal"
         data-bs-target="#modal-cart"
         aria-controls="cart"
@@ -65,7 +65,7 @@
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
         </a>      
       <button
-        class="navbar-toggler bg-primary-20 p-0 border-0"
+        class="navbar-toggler headerBtn bg-primary-20 p-0 border-0"
         type="button"
         data-bs-toggle="modal"
         data-bs-target="#modal-menu-profile"
@@ -123,7 +123,7 @@
           </ul>
         </li> 
       </ul>     
-      <a href="#" class="bg-primary-20 p-3 br-12 position-relative"
+      <a href="#" class="headerBtn bg-primary-20 p-3 br-12 position-relative"
         data-bs-toggle="modal"
         data-bs-target="#modal-cart"
         aria-controls="cart"
@@ -358,7 +358,7 @@
             <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
           </div> 
           <div class="modal-footer border-0 p-0 py-4">
-            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
+            <a class="btn br-4 headerCart btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
           </div>
         </div>
         <!-- 桌面版 -->
@@ -425,7 +425,7 @@
             <p class="text-neutral-100 fw-bold px-3 py-6 fs-5">NT$ <span>255</span></p>
           </div>   
           <div class="modal-footer border-0 p-0">
-            <a class="btn br-4 btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
+            <a class="btn br-4 headercart btn-outline-primary-80 bg-neutral-white text-primary-80 px-8 py-4 fs-6" href="cart.html">立即購買</a>
           </div>
         </div>
       </div>
@@ -476,9 +476,7 @@
       <div class="collapse navbar-collapse position-absolute start-0" id="menu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-flex">
           <li class="nav-item p-4 me-8 fs-6">
-            <a class="nav-link text-neutral-100" href="story.html"
-              >品牌故事</a
-            >
+            <a class="nav-link text-neutral-100" href="story.html">品牌故事</a>
           </li>
           <li class="nav-item p-4 me-8 fs-6">
             <a class="nav-link text-neutral-100" href="news.html">最新消息</a>
@@ -499,17 +497,23 @@
               aria-labelledby="productList"
             >
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="productList-classic.html"
+                <a
+                  class="dropdown-item p-4 text-neutral-100"
+                  href="productList-classic.html"
                   >經典口味</a
                 >
               </li>
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="productList-seasonal.html"
+                <a
+                  class="dropdown-item p-4 text-neutral-100"
+                  href="productList-seasonal.html"
                   >季節限定</a
                 >
               </li>
               <li>
-                <a class="dropdown-item p-4 text-neutral-100" href="productList-giftbox.html"
+                <a
+                  class="dropdown-item p-4 text-neutral-100"
+                  href="productList-giftbox.html"
                   >甜甜禮盒</a
                 >
               </li>
@@ -522,10 +526,7 @@
     <div
       class="d-none d-lg-flex align-items-center position-absolute end-0 ms-auto order-lg-2"
     >
-      <a
-        href="login.html"
-        class="headerBtn bg-primary-20 p-3 br-12 me-8"
-      >
+      <a href="login.html" class="headerBtn bg-primary-20 p-3 br-12 me-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -602,12 +603,20 @@
         <div class="modal-body bg-primary-tint p-5 br-bl-40 br-br-40">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a href="story.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
+              <a
+                href="story.html"
+                type="button"
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+              >
                 品牌故事
               </a>
             </li>
             <li class="nav-item">
-              <a href="news.html" type="button" class="nav-link mb-6 py-3 ps-1 text-neutral-100">
+              <a
+                href="news.html"
+                type="button"
+                class="nav-link mb-6 py-3 ps-1 text-neutral-100"
+              >
                 最新消息
               </a>
             </li>
@@ -659,7 +668,11 @@
         <div
           class="modal-footer border-0 d-flex justify-content-center mt-3 mb-6"
         >
-          <a href="login.html" type="button" class="btn btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4">
+          <a
+            href="login.html"
+            type="button"
+            class="btn headerLogin btn-outline-primary-80 br-4 fs-6 text-primary-80 px-8 py-4"
+          >
             登入／註冊
           </a>
         </div>
